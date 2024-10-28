@@ -4,6 +4,9 @@ export default {
   content: ["./src/**/*.{html,js,jsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        inter:'"Inter", sans-serif'
+      },
       colors: {
         "myprimary" : "#090D1F",
         "mytitle" : "#1A1A1A",

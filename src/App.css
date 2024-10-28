@@ -754,10 +754,6 @@ video {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
-.flex-row {
-  flex-direction: row;
-}
-
 .flex-col {
   flex-direction: column;
 }
@@ -1033,9 +1029,8 @@ video {
   line-height: 1;
 }
 
-.text-7xl {
-  font-size: 4.5rem;
-  line-height: 1;
+.text-\[3\.5rem\] {
+  font-size: 3.5rem;
 }
 
 .text-base {
@@ -1051,15 +1046,6 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
-}
-
-.text-\[3\.5rem\] {
-  font-size: 3.5rem;
 }
 
 .font-bold {
@@ -1206,6 +1192,7 @@ video {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Inter", sans-serif
 }
 
 .hover\:scale-110:hover {
