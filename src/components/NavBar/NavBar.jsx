@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import NavItems from './NavItems'
 import { useSelector } from 'react-redux';
+import { navItems } from '../../Data/NavLinkData';
 
 export default function NavBar() {
   const [active, setActive] = useState(false);
+  const [isFixed, setIsFixed] = useState(false); 
   const darkMode = useSelector((state) => state.darkMode.darkMode);
 
   useEffect(() => {
@@ -14,30 +16,27 @@ export default function NavBar() {
     }
   }, [darkMode]);
 
-  const navItems = [
-    {
-      name: "blog",
-      path: "/"
-    },
-    {
-      name: "Projects",
-      path: "#"
-    },
-    {
-      name: "About",
-      path: "#"
-    },
-    {
-      name: "Newsletter",
-      path: "/newsletter"
-    },
-  ]
+  useEffect(() => {
+    const handleScroll = () => {
+        if (window.scrollY > 50) { 
+           setIsFixed(true); 
+        } else {
+           setIsFixed(false);
+        }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+        window.removeEventListener('scroll', handleScroll);
+    };
+}, []);
   return (
     <>
-    <nav className='flex justify-between items-center h-[72px] lg:h-[125px] px-5 lg:px-28 py-6 lg:py-7.5
+    <nav className={`4xl:container 4xl:mx-auto flex justify-between items-center h-[72px] lg:h-[125px] px-5 lg:px-28 py-6 lg:py-7.5
      bg-white dark:bg-myprimary text-mytitle dark:text-white
-     fixed w-full top-0 z-50'>
-        <h1 className='text-xl font-semibold'>Your Name</h1>
+      ${isFixed ? 'fixed w-full top-0 z-50 transition-all duration-300 ease-in-out shadow-sm shadow-myprimary dark:shadow-white' : 'relative'} `}>
+        <h1 className='text-xl font-semibold'>BATOUL</h1>
         <div className='hidden lg:flex w-70 justify-between items-center'>
           <NavItems items={navItems} btn="log in" />
         </div>

@@ -10,7 +10,7 @@ export default function Newsletter() {
   const recentArticles = useSelector(state => selectArticlesWithoutSections(state, numberOfArticles));
   
   return (
-    <div className='pt-[145px] pb-7.5 px-8 lg:px-28 dark:bg-myprimary'>
+    <div className='pb-7.5 px-8 lg:px-28 dark:bg-myprimary' >
       <Subscribe/>
       <ArticleSection
           title="All blog posts"

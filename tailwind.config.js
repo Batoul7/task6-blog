@@ -40,8 +40,19 @@ export default {
       screens : {
         "mymd" : "789px",
         "myxl" : "1440px",
-        "mysm":"367px"
+        "mysm":"367px",
+        "4xl" : "1921px"
       },
+      animation: {
+        spinSlow: 'spin 2s linear infinite',
+        swirl: 'swirl 0.8s ease-in-out infinite',
+      },
+      keyframes: {
+        swirl: {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
+      }
     },
   },
   plugins: [],

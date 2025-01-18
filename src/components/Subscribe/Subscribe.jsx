@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export default function Subscribe({style}) {
   return (
-    <div className={ `pb-7.5  w-full ${style}`}>
+    <div className={ `pb-7.5  w-full ${style}`} data-aos="fade-up">
       <Link to={'/newsletter'} className='text-purple font-semibold mb-3 block text-center'>Newlatters</Link>
       <h1 className='text-5xl font-semibold text-mytitle dark:text-white mb-6 text-start lg:text-center'>Stories and interviews</h1>
       <p className='text-xl text-mygray dark:text-mytextdark mb-10 text-start lg:text-center'>Subscribe to learn about new product features, the latest in technology, solutions, and updates.</p>

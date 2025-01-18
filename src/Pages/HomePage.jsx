@@ -25,7 +25,8 @@ export default function HomePage() {
   const recentArticles = Array.isArray(articlesWithoutSections) ? articlesWithoutSections.slice(-4) : [];
 
   return (
-    <div className=' bg-white dark:bg-myprimary text-gray-800 dark:text-white min-h-screen pb-7.5 '>
+    <div className=' bg-white dark:bg-myprimary text-gray-800 dark:text-white min-h-screen pb-7.5 '
+ >
       <Hero/>
     {/* Recent blog posts */}
       <ArticleSection

@@ -17,8 +17,8 @@ export default function ArticlePage() {
 
     return (
         <>
-        <div className=" px-8 lg:px-28 dark:bg-myprimary ">
-            <div className='flex flex-col-reverse lg:flex-row gap-8 pb-7.5 pt-40'>
+        <div className=" px-8 lg:px-28 dark:bg-myprimary " >
+            <div className='flex flex-col-reverse lg:flex-row gap-8 pb-7.5'>
             {/* Recent blog posts */}
             <ArticleSection
                 title="Recent blog posts"
@@ -28,7 +28,7 @@ export default function ArticlePage() {
                 padding='0'/>
     
             {/* Article content */}
-            <ArticleDetails article={article}/>
+            <ArticleDetails article={article} />
             </div>
             <Subscribe style=' xl:w-[58.473vw] xl:ms-auto'/>
         </div>

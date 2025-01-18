@@ -8,7 +8,9 @@ const ArticleSection = ({ title, articles, gridStyle, categoryColors, padding}) 
       <h2 className="text-2xl font-semibold text-mytitle dark:text-white mb-8">{title}</h2>
       <div className={gridStyle}>
         {articles.map((article, index) => (
-          <Link  to={`/article/${article.id}`} key={index}
+          <Link  to={`/article/${article.id}`} key={index} 
+          data-aos="fade-up"
+          data-aos-duration="2000"
           className={`flex gap-8 
             hover:shadow-xl transition-shadow duration-300
             ${gridStyle.includes('recent') ? `

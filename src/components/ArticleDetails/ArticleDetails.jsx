@@ -5,7 +5,7 @@ import { categoryColors } from '../CategoryColors/CategoryColors';
 export default function ArticleDetails({article}) {
   return (
     <>
-    <div className='w-full '>
+    <div className='w-full '  data-aos="fade-up">
     <span className="text-mypurple text-sm font-semibold mb-3">{article.date}</span>
         <h3 className="text-4xl font-bold text-mytitle dark:text-white mb-3">{article.title}</h3>
         <img

@@ -8,7 +8,7 @@ const initialState = {
 };
 
 const darkModeInitialState = {
-  darkMode: false,
+  darkMode: true,
 };
 
 const darkModeSlice = createSlice({
