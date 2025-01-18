@@ -10,7 +10,7 @@ const ArticleSection = ({ title, articles, gridStyle, categoryColors, padding}) 
         {articles.map((article, index) => (
           <Link  to={`/article/${article.id}`} key={index} 
           data-aos="fade-up"
-          data-aos-duration="2000"
+          data-aos-duration="1000"
           className={`flex gap-8 
             hover:shadow-xl transition-shadow duration-300
             ${gridStyle.includes('recent') ? `
@@ -28,7 +28,7 @@ const ArticleSection = ({ title, articles, gridStyle, categoryColors, padding}) 
               <div className={`${gridStyle.includes('recent') && index === articles.length - 1 ? 'xl:flex-1' : '' }`}>
                 <span className="text-mypurple text-sm font-semibold mb-3">{article.date}</span>
                 <div className="flex justify-between items-center">
-                  <h3 className="text-2xl font-semibold text-mytitle dark:text-white mb-3">{article.title}</h3>
+                  <h3 className="text-2xl font-semibold text-mytitle dark:text-white mb-3 line-clamp-1">{article.title}</h3>
                     <svg
                       width="12"
                       height="12"
@@ -43,7 +43,7 @@ const ArticleSection = ({ title, articles, gridStyle, categoryColors, padding}) 
                         strokeLinejoin="round"/>
                     </svg>
                 </div>
-                <p className="text-mygray dark:text-mytextdark text-base">{article.desc}</p>
+                <p className="text-mygray dark:text-mytextdark text-base line-clamp-2">{article.desc}</p>
                 <div className="flex flex-wrap gap-2 mt-6">
                   {article.category.map((cat, index) => {
                     const { bg, text } = categoryColors[cat] || { bg: 'bg-bggreen', text: 'text-mygreen' };

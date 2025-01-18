@@ -1049,7 +1049,7 @@ export const articles = [
     },
     {
       id: 19,
-      image: "/src/assets/images/ar3.jpg",
+      image: arImg9,
       title: "Building your API Stack",
       date: "Lana Steiner • 1 Jan 2023",
       desc:"The rise of RESTful APIs has been met by a rise in tools for creating, testing, and manag...",

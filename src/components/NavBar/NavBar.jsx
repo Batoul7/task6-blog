@@ -60,7 +60,7 @@ export default function NavBar() {
        ${active ? 'translate-x-0': 'translate-x-full'} fixed top-0 h-screen w-full
         bg-white dark:bg-myprimary text-mytitle dark:text-white z-50`}>
     <div className='absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4'>
-    <h1 className='text-center text-x18 font-semibold mb-13'>Your Name</h1>
+    <h1 className='text-center text-x18 font-semibold mb-10'>BATOUL</h1>
     <NavItems items={navItems} show={setActive} />
     </div>
     <button className='absolute bottom-5 left-2/4 -translate-x-2/4'
@@ -77,7 +77,7 @@ export default function NavBar() {
         </clipPath>
         </defs>
         </svg>
-      </button>
+    </button>
     </div>
     </>
   )
