@@ -18,7 +18,7 @@ export default function ArticleDetails({article}) {
         <div key={index} className="my-8 w-full text-mygray dark:text-mytextdark">
             <p>{section?.info}</p>
             <img src={section?.image} alt={`Section ${index + 1}`} className='w-full my-3' />
-            <p className='mb-3 text-center px-[105.5px]'>{section?.descImg}</p>
+            <p className='mb-3 text-center'>{section?.descImg}</p>
             <p>{section?.content}</p>
         </div>
     ))}
