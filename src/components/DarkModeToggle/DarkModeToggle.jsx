@@ -1,6 +1,9 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectDarkMode, toggleDarkMode } from '../../redux/slice';
+import SunImg from "/src/assets/sun.svg"
+import MoonImg from "/src/assets/moon.svg"
+
 
 const DarkModeToggle = () => {
   const dispatch = useDispatch();
@@ -18,12 +21,12 @@ const DarkModeToggle = () => {
       >
        {/* sun  */}
         <div className={`absolute left-4 w-6 h-6 transition duration-500 opacity-100 dark:opacity-0 `}  >
-            <img src="/src/assets/sun.svg" alt="light" />
+            <img src={SunImg} alt="light" />
         </div>
         {/* moon  */}
         <div className={`absolute right-4 w-6 h-6 transition duration-500
           ${darkMode? 'opacity-100': 'opacity-0'}`}>
-            <img src="/src/assets/moon.svg" alt="dark" />
+            <img src={MoonImg} alt="dark" />
         </div>
         <div
           className={`w-6 h-6 rounded-full transform transition duration-500 

@@ -39,17 +39,19 @@ function App() {
     <>
     {showPreloader ? <Preloader /> : null}
     {!showPreloader && (
-      <>
-    <NavBar/>
-    <ScrollToTop />
-    <div className='4xl:container 4xl:mx-auto' data-aos="fade-down">  
-      <Routes>
-        <Route path='/' element={<HomePage/>}/>
-        <Route path="/article/:id" element={<ArticlePage />} /> 
-        <Route path='/newsletter' element={<Newsletter/>}/>
-      </Routes>
-      <Footer/> 
-    </div>
+    <>
+
+      <NavBar/>
+      <ScrollToTop />
+      <div className='4xl:container 4xl:mx-auto'>  
+        <Routes>
+          <Route path='/' element={<HomePage/>}/>
+          <Route path="/article/:id" element={<ArticlePage />} /> 
+          <Route path='/newsletter' element={<Newsletter/>}/>
+        </Routes>
+        <Footer/> 
+      </div>
+
     </>
     )}
     </>
